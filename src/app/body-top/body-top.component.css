@@ -1,0 +1,21 @@
+.top-body{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+
+}
+.select-SA{
+  width:50%;
+  margin-right:40px;
+}
+.input-SA{
+  width:50%;
+}
+
+.form-select,form-control{
+  width: 350px;
+}
+.validators{
+  margin-top:50px
+}
+
