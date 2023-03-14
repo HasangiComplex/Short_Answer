@@ -1,0 +1,50 @@
+<div class="top-body">
+  <div class="select-IP">
+    <h4>Input type</h4>
+    <select class="form-select" aria-label="Default select example" [(ngModel)]="selectedOption">
+      <option selected value="ValidationsComponent">Short answer</option>
+      <option value="ValidationLongComponent">Long Answer</option>
+      <option value="ValidationRadioComponent">Radio buttons</option>
+      <option value="ValidationCheckComponent">Checkboxes</option>
+      <option value="ValidationDropdownComponent">Dropdown</option>
+      <option value="FileUploadComponent">File upload</option>
+      <option value="ValidationDataComponent">Date</option>
+    </select>
+
+<div class="validators">
+
+
+    <ng-container *ngIf="selectedOption === 'ValidationsComponent'">
+
+      <app-validations ></app-validations>
+    </ng-container>
+
+ <ng-container *ngIf="selectedOption === 'ValidationLongComponent'">
+ <app-validation-long ></app-validation-long>
+
+ </ng-container>
+    <ng-container *ngIf="selectedOption === 'ValidationRadioComponent'">
+      <app-validation-radio ></app-validation-radio>
+    </ng-container>
+
+    <ng-container *ngIf="selectedOption === 'ValidationCheckComponent'">
+      <app-validation-check ></app-validation-check>
+    </ng-container>
+    <ng-container *ngIf="selectedOption === 'ValidationDropdownComponent'">
+      <app-validation-dropdown ></app-validation-dropdown>
+    </ng-container>
+    <ng-container *ngIf="selectedOption === 'FileUploadComponent'">
+      <app-file-upload ></app-file-upload>
+    </ng-container>
+    <ng-container *ngIf="selectedOption === 'ValidationDataComponent'">
+      <app-validation-data ></app-validation-data>
+    </ng-container>
+</div>
+  </div>
+
+  <div class="input-SA">
+    <h4>Label name</h4>
+    <input class="form-control" type="text" placeholder="Type the label name" aria-label="default input example">
+  </div>
+
+</div>
