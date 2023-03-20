@@ -8,4 +8,13 @@ import { Component, Input } from '@angular/core';
 })
 export class ValidationsComponent {
   @Input() data: any;
+
+  selectedOption2: any;
+  constructor() {
+    this.selectedOption2 = 'NumberValidationComponent'; // Set the initial value of the selected option
+  }
+
+
+
+
 }

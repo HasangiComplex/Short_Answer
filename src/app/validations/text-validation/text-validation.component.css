@@ -1,0 +1,24 @@
+.top-body-is-text{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+
+}
+.form-control{
+  margin-left: 60px;
+}
+.form-control-num{
+  width:25%;
+}
+.input-SA-VE{
+  width:75%;
+}
+
+.form-select,form-control{
+  width: 150%;
+  margin-top:10px;
+
+}
+.validators{
+  margin-top:50px
+}

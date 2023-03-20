@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ValidationLongComponent } from './validation-long.component';
+import { TextValidationComponent } from './text-validation.component';
 
-describe('ValidationLongComponent', () => {
-  let component: ValidationLongComponent;
-  let fixture: ComponentFixture<ValidationLongComponent>;
+describe('TextValidationComponent', () => {
+  let component: TextValidationComponent;
+  let fixture: ComponentFixture<TextValidationComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ValidationLongComponent ]
+      declarations: [ TextValidationComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ValidationLongComponent);
+    fixture = TestBed.createComponent(TextValidationComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

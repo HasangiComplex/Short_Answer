@@ -7,15 +7,12 @@ import { FooterComponent } from './footer/footer.component';
 import { PopupModalComponent } from './popup-modal/popup-modal.component';
 import { BodyTopComponent } from './body-top/body-top.component';
 import { ValidationsComponent } from './validations/validations.component';
-import {FormsModule} from "@angular/forms";
-import { ValidationLongComponent } from './validation-long/validation-long.component';
-import { ValidationRadioComponent } from './validation-radio/validation-radio.component';
-import { ValidationCheckComponent } from './validation-check/validation-check.component';
-import { ValidationDropdownComponent } from './validation-dropdown/validation-dropdown.component';
-import { FileUploadComponent } from './file-upload/file-upload.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
-import { ValidationDataComponent } from './validation-data/validation-data.component';
-import { BodyTopNewComponent } from './body-top-new/body-top-new.component';
+
+import { NumberValidationComponent } from './validations/number-validation/number-validation.component';
+import { TextValidationComponent } from './validations/text-validation/text-validation.component';
+import { LengthValidationComponent } from './validations/length-validation/length-validation.component';
 
 @NgModule({
   declarations: [
@@ -25,18 +22,14 @@ import { BodyTopNewComponent } from './body-top-new/body-top-new.component';
     PopupModalComponent,
     BodyTopComponent,
     ValidationsComponent,
-    ValidationLongComponent,
-    ValidationRadioComponent,
-    ValidationCheckComponent,
-    ValidationDropdownComponent,
-    FileUploadComponent,
-
-    ValidationDataComponent,
-     BodyTopNewComponent
+    NumberValidationComponent,
+    TextValidationComponent,
+    LengthValidationComponent
   ],
     imports: [
         BrowserModule,
-        FormsModule
+        FormsModule,
+        ReactiveFormsModule,
     ],
   providers: [],
   bootstrap: [AppComponent]

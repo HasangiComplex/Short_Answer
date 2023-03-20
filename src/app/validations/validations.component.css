@@ -1,0 +1,17 @@
+.select-IP{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+
+}
+
+.form-select,form-control{
+  width: 50%;
+  margin-right: 10px;
+}
+.form-select{
+  height: 40px;
+}
+.validators{
+  margin-top:50px
+}
