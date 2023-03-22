@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./text-validation.component.css']
 })
 export class TextValidationComponent {
+  selectedOption3: any;
+  constructor() {
+    this.selectedOption3 = 'IsStringValidationComponent'; // Set the initial value of the selected option
+  }
+
 
 }

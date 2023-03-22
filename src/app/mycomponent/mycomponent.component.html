@@ -1,0 +1,13 @@
+
+
+
+<div *ngFor="let set of sets; let i=index">
+  <select [(ngModel)]="set.dropdownValue" (change)="onChange(set)">
+    <option value="option1" [disabled]="set.disableOptions.includes('option1')">Option 1</option>
+    <option value="option2" [disabled]="set.disableOptions.includes('option2')">Option 2</option>
+    <option value="option3" [disabled]="set.disableOptions.includes('option3')">Option 3</option>
+  </select>
+  <input type="text" [(ngModel)]="set.textboxValue">
+  <button (click)="removeSet(i)">Remove</button>
+</div>
+<button (click)="addSet()">Add Set</button>

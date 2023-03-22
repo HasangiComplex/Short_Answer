@@ -1,0 +1,27 @@
+<div class="top-body">
+  <div class="select-IP">
+
+    <select class="form-select" aria-label="Default select example" [(ngModel)]="selectedOption2">
+      <option selected value="TextValidationComponent">Text</option>
+      <option value="NumberValidationComponent">Number</option>
+      <option value="LengthValidationComponent">Length</option>
+    </select>
+    <div class="validations2">
+      <ng-container *ngIf="selectedOption2 === 'NumberValidationComponent'">
+
+        <app-number-validation ></app-number-validation>
+      </ng-container>
+      <ng-container *ngIf="selectedOption2 === 'TextValidationComponent'">
+
+        <app-text-validation ></app-text-validation>
+      </ng-container>
+
+      <ng-container *ngIf="selectedOption2 === 'LengthValidationComponent'">
+
+        <app-length-validation ></app-length-validation>
+      </ng-container>
+    </div>
+
+  </div>
+
+</div>

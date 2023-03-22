@@ -8,32 +8,20 @@
   </label>
 </div>
 
-  <div class="top-body">
-    <div class="select-IP">
+  <div class="alert alert-dark" role="alert">
+    <h6>String values are accepted by default</h6>
 
-      <select class="form-select" aria-label="Default select example" [(ngModel)]="selectedOption2">
-        <option selected value="NumberValidationComponent">Number</option>
-        <option value="TextValidationComponent">Text</option>
-        <option value="LengthValidationComponent">Length</option>
-      </select>
-    <div class="validations2">
-      <ng-container *ngIf="selectedOption2 === 'NumberValidationComponent'">
+   <p >The “Short Answer” type will accept letters, numbers and special characters by default. You can restrict/allow data
+     types as your preference via applying validations</p>
+  </div>
 
-        <app-number-validation ></app-number-validation>
-      </ng-container>
-      <ng-container *ngIf="selectedOption2 === 'TextValidationComponent'">
+  <div class="container">
+    <div *ngFor="let field of fields" class="field"  id="controlsBody" style="display:flex; ">
+      <app-validation-body></app-validation-body>
 
-        <app-text-validation ></app-text-validation>
-      </ng-container>
-
-      <ng-container *ngIf="selectedOption2 === 'LengthValidationComponent'">
-
-        <app-length-validation ></app-length-validation>
-      </ng-container>
+      <span class="remove-btn" (click)="removeField(field)" style="margin-left:50px;">x</span>
     </div>
-
-    </div>
-
+       <a (click)="addField()" style="color: blue"> + <u>ADD ANOTHER VALIDATION</u></a>
   </div>
 
 

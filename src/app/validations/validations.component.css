@@ -15,3 +15,6 @@
 .validators{
   margin-top:50px
 }
+.controlsBody{
+  display: inline-flex;
+}

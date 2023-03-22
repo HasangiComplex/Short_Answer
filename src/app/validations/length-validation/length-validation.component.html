@@ -1,22 +1,29 @@
 <div class="top-body-is-number">
   <div class="select-IP">
 
-    <select class="form-select" aria-label="Default select example" >
-      <option selected value="ValidationsComponent">Maximum character count</option>
-      <option value="ValidationLongComponent">Minimum character count</option>
+    <select class="form-select" aria-label="Default select example" [(ngModel)]="selectedOption5" (change)="onOptionClick($event)">
+      <option selected value="MaxLengthValidationComponent" [disabled]="option2Disabled">Maximum character count</option>
+      <option value="MinLengthValidationComponent" [disabled]="option2Disabled">Minimum character count</option>
+      <option value="BetweenLengthValidationComponent" [disabled]="option2Disabled">Between</option>
 
     </select>
+    <div class="validations2">
+      <ng-container *ngIf="selectedOption5 === 'MaxLengthValidationComponent'">
 
+        <app-max-length-validation ></app-max-length-validation>
+      </ng-container>
+      <ng-container *ngIf="selectedOption5 === 'MinLengthValidationComponent'">
+
+        <app-min-length-validation ></app-min-length-validation>
+      </ng-container>
+      <ng-container *ngIf="selectedOption5 === 'BetweenLengthValidationComponent'">
+
+        <app-between-length-validation ></app-between-length-validation>
+      </ng-container>
+      </div>
 
   </div>
-  <div class="validation-num">
 
-
-      <input class="form-control" type="text" placeholder="Number" aria-label="default input example">
-
-      <input class="form-control" type="text" placeholder="Error Text" aria-label="default input example">
-
-  </div>
 
 </div>
 

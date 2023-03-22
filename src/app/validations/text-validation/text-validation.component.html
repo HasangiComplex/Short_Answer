@@ -1,20 +1,53 @@
 <div class="top-body-is-text">
   <div class="select-IP">
 
-    <select class="form-select" aria-label="Default select example" >
-      <option selected value="ValidationsComponent">Email</option>
-      <option value="ValidationLongComponent">URL</option>
-      <option value="ValidationRadioComponent">Contains</option>
-      <option value="ValidationCheckComponent">Doesn't contain</option>
+    <select class="form-select" aria-label="Default select example" [(ngModel)]="selectedOption3" >
+      <option selected value="IsStringValidationComponent">Is string</option>
+      <option value="IsTextValidationComponent">Is text</option>
+      <option value="EmailValidationComponent">Email</option>
+      <option value="UrlValidationComponent">URL</option>
+      <option value="PrefixValidationComponent">Has a prefix</option>
+      <option value="SuffixValidationComponent">Has a suffix</option>
+      <option value="DoesntContainValidationComponent">Doesn't contain</option>
 
     </select>
+    <div class="validations2">
+      <ng-container *ngIf="selectedOption3 === 'IsStringValidationComponent'">
 
+        <app-is-string-validation ></app-is-string-validation>
+      </ng-container>
+      <ng-container *ngIf="selectedOption3 === 'IsTextValidationComponent'">
+
+        <app-is-text-validation ></app-is-text-validation>
+      </ng-container>
+
+      <ng-container *ngIf="selectedOption3 === 'EmailValidationComponent'">
+
+        <app-email-validation ></app-email-validation>
+      </ng-container>
+      <ng-container *ngIf="selectedOption3 === 'UrlValidationComponent'">
+
+        <app-url-validation ></app-url-validation>
+      </ng-container>
+      <ng-container *ngIf="selectedOption3 === 'PrefixValidationComponent'">
+
+        <app-prefix-validation ></app-prefix-validation>
+      </ng-container>
+      <ng-container *ngIf="selectedOption3 === 'SuffixValidationComponent'">
+
+        <app-suffix-validation ></app-suffix-validation>
+      </ng-container>
+      <ng-container *ngIf="selectedOption3 === 'DoesntContainValidationComponent'">
+
+        <app-doesnt-contain-validation ></app-doesnt-contain-validation>
+      </ng-container>
+    </div>
 
   </div>
 
 
 
-      <input class="form-control" type="text" placeholder="Error Text" aria-label="default input example">
+
 
 
 

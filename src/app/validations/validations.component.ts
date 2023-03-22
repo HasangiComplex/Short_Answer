@@ -11,9 +11,22 @@ export class ValidationsComponent {
 
   selectedOption2: any;
   constructor() {
-    this.selectedOption2 = 'NumberValidationComponent'; // Set the initial value of the selected option
+    this.selectedOption2 = 'TextValidationComponent'; // Set the initial value of the selected option
   }
 
+
+  fields: any[] = [];
+  addField() {
+    this.fields.push({});
+  }
+  removeField(field: any) {
+    const index = this.fields.indexOf(field);
+    if (index >= 0) {
+      this.fields.splice(index, 1);
+
+    }
+
+  }
 
 
 

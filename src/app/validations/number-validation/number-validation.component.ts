@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./number-validation.component.css']
 })
 export class NumberValidationComponent {
+  selectedOption4: any;
+  constructor() {
+    this.selectedOption4 = 'IsNumberValidationComponent'; // Set the initial value of the selected option
+  }
 
 }
